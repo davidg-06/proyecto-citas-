@@ -67,6 +67,15 @@ const submitCita= e => {
     crearCita(citas)
 
     //reiniciar form 
+
+    actualizarcitas({
+        mascota:'',
+    propietario:'',
+    fecha:'',
+    hora:'',
+    sintoma:''
+
+    })
 }
     
 
@@ -83,7 +92,7 @@ const submitCita= e => {
                     className='u-full-width'
                     placeholder='Nombre Mascota'
                     onChange={actualizar}
-                  //  value={mascota}
+                    value={mascota}
                 />
 
 
@@ -97,7 +106,7 @@ const submitCita= e => {
                     className='u-full-width'
                     placeholder='Nombre Dueño'
                     onChange={actualizar}
-                  //  value={propietario}
+                  value={propietario}
                 />
 
 
@@ -108,7 +117,7 @@ const submitCita= e => {
                     name='fecha'
                     className='u-full-width'
                     onChange={actualizar}
-                    //value={fecha}
+                value={fecha}
                 />
 
                 <label>Hora </label>
@@ -117,7 +126,7 @@ const submitCita= e => {
                     name='hora'
                     className='u-full-width'
                     onChange={actualizar}
-                  //  value={hora}
+                 value={hora}
                 />
 
                 <label>Síntomas </label>
@@ -125,7 +134,7 @@ const submitCita= e => {
                 className='u-full-width'
                 name='sintoma'
                 onChange={actualizar}
-              //  value={sintoma}
+              value={sintoma}
                 > 
                 </textarea>
 

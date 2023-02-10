@@ -17,7 +17,8 @@ function App() {
 
   const crearCita=cita =>{
 
-    guardarCitas([...citas, cita])
+    guardarCitas([...citas, 
+      cita])
   }
 
 
