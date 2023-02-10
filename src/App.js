@@ -17,6 +17,8 @@ const eliminarCita=id=>{
 
 }
 
+//mensaje condicional si hay citas o no 
+const titulo= citas.length=== 0 ? 'No hay citas' : 'Administra tu cita '
 
 
   //funcion que tome las citas actuales y tome la nueva 
@@ -46,7 +48,7 @@ const eliminarCita=id=>{
           </div>
 
           <div className="one-half column">  
-          <h2> Administra tu citas</h2>
+          <h2> {titulo} </h2>
             {citas.map(cita => (
               <Cita
                 key={cita.id}
