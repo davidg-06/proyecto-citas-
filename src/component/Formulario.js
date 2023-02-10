@@ -1,6 +1,6 @@
 
 import React, {Fragment, useState} from 'react'
-
+import { v4 as uuidv4 } from 'uuid';
 
 export const Formulario = () => {
 
@@ -58,7 +58,8 @@ const submitCita= e => {
 
         actualizarError (false)
     //asignar Id
-    // citas.id=uuid();
+
+     citas.id=uuidv4();
     console.log(citas)
 
     //crear cita
