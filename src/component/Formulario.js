@@ -2,7 +2,7 @@
 import React, {Fragment, useState} from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
-export const Formulario = () => {
+export const Formulario = ({crearCita}) => {
 
 //Crear state citas 
 const [citas, actualizarcitas]=useState ({
@@ -63,6 +63,8 @@ const submitCita= e => {
     console.log(citas)
 
     //crear cita
+
+    crearCita(citas)
 
     //reiniciar form 
 }

@@ -1,8 +1,27 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Formulario } from "./component/Formulario";
 
 
 function App() {
+
+
+  //arreglo de citas 
+
+  const [citas, guardarCitas]=useState([]);
+
+
+
+
+
+  //funcion que tome las citas actuales y tome la nueva 
+
+  const crearCita=cita =>{
+
+    guardarCitas([...citas, cita])
+  }
+
+
+
   return (
     <Fragment>
 
@@ -13,7 +32,10 @@ function App() {
         <div className='row' >
 
           <div className="one-half column">
-          <Formulario/> 
+          <Formulario
+          crearCita={crearCita}
+          
+          /> 
           </div>
 
           <div className="one-half column">  2 </div>
